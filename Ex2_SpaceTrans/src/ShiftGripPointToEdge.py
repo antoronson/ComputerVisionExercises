@@ -22,16 +22,21 @@ class ShiftGripPosToPartEdge:
 
 
     def RotateCamFrameToUserFrame(self, _Angle):
-        self.thetaUF = -360-Angle
+        self.thetaUF = -360-_Angle
 
-        if (self.thetaUF >-360):
-            #Do Nothing
-        else:
+        if self.thetaUF <-360:
             self.thetaUF+=360
+
+        else:
+            #Do Notning
+            #TODO: Catch Error here
+            return 0
+            
     
+
     def setActPartRotation(self, _Angle):
         self.thetaActPart = self.thetaActPart + self.labelTheta
     
-    
+   def  
 
 
